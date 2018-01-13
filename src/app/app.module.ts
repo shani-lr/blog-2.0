@@ -5,7 +5,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { reducers } from './store/app.reducers';
-import { BlogsModule } from './blogs/blogs.module';
+import { PostsModule } from './posts/posts.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { BlogsModule } from './blogs/blogs.module';
   ],
   imports: [
     BrowserModule,
-    BlogsModule,
+    PostsModule,
     StoreModule.forRoot(reducers)
   ],
   providers: [],

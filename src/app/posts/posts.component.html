@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{(blogState | async).posts[0].title}}</h1>
+      <img [src]="(blogState | async).posts[0].image">
+      <h4>By {{(blogState | async).posts[0].author}} at {{(blogState | async).posts[0].timestamp}}</h4>
+      <p>{{(blogState | async).posts[0].content}}</p>
+    </div>
+  </div>
+</div>
