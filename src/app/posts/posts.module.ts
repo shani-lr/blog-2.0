@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { PostComponent } from './post/post.component';
 import { PostsComponent } from './posts.component';
 import { PostsRoutingModule } from './posts-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    PostsRoutingModule
+    PostsRoutingModule,
+    SharedModule
   ],
   declarations: [
     PostsComponent,

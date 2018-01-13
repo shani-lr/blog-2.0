@@ -1,3 +1,7 @@
 .curser-pointer {
   cursor: pointer;
 }
+
+.d-inline-block {
+  display: inline-block;
+}

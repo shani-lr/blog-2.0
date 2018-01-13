@@ -21,7 +21,7 @@ const initialState: State = {
   ]
 };
 
-export function blogReducer(state = initialState, action) {
+export function postReducer(state = initialState, action) {
   switch (action.type) {
     default:
       return state;

@@ -1,0 +1,19 @@
+img {
+  max-height: 100px;
+}
+
+.subtitle {
+  color: lightgrey;
+  padding: 1em;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: dodgerblue;
+}
+
+.post-item {
+  border: 1px solid lightgrey;
+  padding: 1em;
+}

@@ -1,11 +1,11 @@
 import { ActionReducerMap } from '@ngrx/store';
 
-import * as fromBlog from '../posts/store/blog.reducers';
+import * as fromPost from '../posts/store/post.reducers';
 
 export interface AppState {
-  posts: fromBlog.State;
+  posts: fromPost.State;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  posts: fromBlog.blogReducer
+  posts: fromPost.postReducer
 };
