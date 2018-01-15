@@ -1,13 +1,15 @@
-import { Component, Input} from '@angular/core';
-
-import { Post } from '../post.model';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css'],
+  styleUrls: ['./post.component.css']
 })
-export class PostComponent {
-  @Input() post: Post;
-  @Input() index: number;
+export class PostComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }

@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-post-list-item
+      *ngFor="let post of (postState | async).posts; let i = index"
+      [post]="post"
+      [index]="i">
+    </app-post-list-item>
+  </div>
+</div>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>

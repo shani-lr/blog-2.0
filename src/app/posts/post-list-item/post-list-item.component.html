@@ -1,0 +1,14 @@
+<a [routerLink]="[index]"
+   routerLinkActive="active">
+  <div class="d-inline-block post-item curser-pointer">
+    <img [src]="post.image" class="img-responsive d-inline-block">
+    <div class="d-inline-block">
+      <div>
+        <span class="title">{{ post.title }}</span>
+        <span class="subtitle">By {{ post.author }} at {{ post.timestamp }}</span>
+      </div>
+      <p>{{ post.content | truncate }}</p>
+    </div>
+  </div>
+</a>
+
