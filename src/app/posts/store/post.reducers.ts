@@ -6,7 +6,7 @@ export interface State {
 
 const initialState: State = {
   posts: [
-    new Post('Lorem ipsum',
+    new Post(0, 'Lorem ipsum',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisl ut nibh ' +
       'ornare, quis mollis dolor congue. Vivamus in interdum nibh. Suspendisse mollis metus in dui pretium, ' +
       'nec faucibus libero ultrices. Duis in gravida ipsum, sed facilisis nulla. Fusce viverra, dolor non ' +
