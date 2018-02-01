@@ -1,17 +1,11 @@
 <a [routerLink]="[index]"
    routerLinkActive="active">
-  <div class="post-item curser-pointer">
-    <div class="row">
-      <div class="col-xs-3">
-        <img [src]="post.image" class="img-responsive">
-      </div>
-      <div class="col-xs-9">
-        <div>
-          <span class="title">{{ post.title }}</span>
-          <span class="subtitle">By {{ post.author }} at {{ post.timestamp }}</span>
-        </div>
-        <div>{{ post.content | truncate }}</div>
-      </div>
+  <div class="media list-item">
+    <img class="align-self-center mr-3" [src]="post.image" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">{{ post.title }}</h5>
+      <p class="mt-0">Created by {{ post.author }} at {{ post.timestamp }}</p>
+      <p class="mb-0">{{ post.content | truncate }}</p>
     </div>
   </div>
 </a>

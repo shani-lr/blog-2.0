@@ -1,11 +1,8 @@
 <div>
   <h1>{{ (postState | async).posts[id].title }}</h1>
-  <img [src]="(postState | async).posts[id].image" class="img-responsive d-inline-block">
-  <div class="d-inline-block">
-    <div>
-      <h2>By {{ (postState | async).posts[id].author }} at {{ (postState | async).posts[id].timestamp }}</h2>
-    </div>
-    <p>{{ (postState | async).posts[id].content }}</p>
-  </div>
+  <h4>Created By {{ (postState | async).posts[id].author }} at {{ (postState | async).posts[id].timestamp }}</h4>
+  <img [src]="(postState | async).posts[id].image"
+       class="img-responsive center">
+  <p>{{ (postState | async).posts[id].content }}</p>
 </div>
 

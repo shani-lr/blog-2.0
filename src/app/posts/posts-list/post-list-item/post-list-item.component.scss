@@ -1,0 +1,23 @@
+@import '~sass/variables';
+
+img {
+  max-height: 100px;
+  border-radius: $border-radius-md;
+  border: $grey-dashed-border;
+}
+
+.list-item {
+  background-color: $light-grey-background-color;
+  padding: 1em;
+  margin: 1em;
+  border: $grey-dashed-border;
+  border-radius: $border-radios-xl;
+  &:hover {
+    background-color: $ultra-light-background-color;
+  }
+}
+
+a,a:hover {
+  color: black;
+  text-decoration: none;
+}

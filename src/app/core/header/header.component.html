@@ -1,25 +1,29 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed curser-pointer"
-              data-toggle="collapse" data-target="#navbar-collapse"
-              aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a routerLink="/"
-        class="navbar-brand curser-pointer">Panda Blog</a>
-    </div>
-    <div class="collapse navbar-collapse curser-pointer" id="navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/posts">Posts</a></li>
-        <li routerLinkActive="active"><a>Link</a></li>
+<div class="header">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a routerLink="/" class="navbar-brand">Panda Blog</a>
+    <button class="navbar-toggler" type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/posts" class="nav-link">Posts</a>
+        </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right curser-pointer">
-        <li><a>Link</a></li>
+      <ul class="navbar-nav ml-auto">
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/" class="nav-link">Sign Up</a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+          <a routerLink="/" class="nav-link">Login</a>
+        </li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>
+
