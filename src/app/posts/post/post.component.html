@@ -1,11 +1,19 @@
-<div>
-  <button type="button" class="btn btn-secondary btn-sm float-right">
-    <i class="fas fa-edit"></i> Edit
-  </button>
-  <h1>{{ (postState | async).posts[id].title }}</h1>
-  <h4>Created By {{ (postState | async).posts[id].author }} at {{ (postState | async).posts[id].timestamp }}</h4>
-  <img [src]="(postState | async).posts[id].image"
-       class="img-responsive center">
-  <p>{{ (postState | async).posts[id].content }}</p>
+<div class="row">
+  <div class="col">
+    <button (click)="onDelete()" type="button" class="btn btn-danger btn-sm float-right">
+      <i class="fas fa-trash"></i> Delete
+    </button>
+    <button routerLink="edit" type="button" class="btn btn-primary btn-sm float-right margin-right">
+      <i class="fas fa-edit"></i> Edit
+    </button>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    <h1>{{ (postState | async).posts[id].title }}</h1>
+    <h4>Created By {{ (postState | async).posts[id].author }} at {{ (postState | async).posts[id].timestamp }}</h4>
+    <img [src]="(postState | async).posts[id].image"
+         class="img-responsive center">
+    <p>{{ (postState | async).posts[id].content }}</p>
+  </div>
 </div>
 

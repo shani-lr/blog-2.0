@@ -1,4 +1,5 @@
 import { Post } from '../post.model';
+import * as PostActions from './post.actions';
 
 export interface State {
   posts: Post[];
@@ -6,7 +7,7 @@ export interface State {
 
 const initialState: State = {
   posts: [
-    new Post(0, 'Lorem ipsum',
+    new Post('Lorem ipsum',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lacinia nisl ut nibh ' +
       'ornare, quis mollis dolor congue. Vivamus in interdum nibh. Suspendisse mollis metus in dui pretium, ' +
       'nec faucibus libero ultrices. Duis in gravida ipsum, sed facilisis nulla. Fusce viverra, dolor non ' +
@@ -18,7 +19,7 @@ const initialState: State = {
       'https://tinyurl.com/ycqyhspq',
       'shani',
       new Date().toLocaleDateString()),
-    new Post(1, 'Morbi quis mattis', 'Morbi quis mattis mauris. Curabitur consequat ' +
+    new Post('Morbi quis mattis', 'Morbi quis mattis mauris. Curabitur consequat ' +
       'lacus at faucibus fringilla. Maecenas pellentesque justo vitae luctus tincidunt. Ut ' +
       'commodo mollis leo sed suscipit. Nulla quis auctor mi. Morbi ornare turpis euismod est ' +
       'pellentesque, eget placerat dui ultricies. Lorem ipsum dolor sit amet, consectetur ' +
@@ -33,8 +34,35 @@ const initialState: State = {
   ]
 };
 
-export function postReducer(state = initialState, action) {
+export function postReducer(state = initialState, action: PostActions.PostActions) {
   switch (action.type) {
+    case (PostActions.ADD_POST): {
+      return {
+        ...state,
+        posts: [...state.posts, action.payload]
+      };
+    }
+    case (PostActions.UPDATE_POST): {
+      const post = state.posts[action.payload.id];
+      const updatedPost = {
+        ...post,
+        ...action.payload.post
+      };
+      const posts = [...state.posts];
+      posts[action.payload.id] = updatedPost;
+      return {
+        ...state,
+        posts: posts
+      };
+    }
+    case (PostActions.DELETE_POST): {
+      const posts = [...state.posts];
+      posts.splice(action.payload, 1);
+      return {
+        ...state,
+        posts: posts
+      };
+    }
     default:
       return state;
   }

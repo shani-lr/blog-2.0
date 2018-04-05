@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 import * as fromApp from '../../store/app.reducers';
 import * as fromPost from '../store/post.reducers';
+import { DeletePost } from '../store/post.actions';
 
 @Component({
   selector: 'app-post',
@@ -24,5 +25,10 @@ export class PostComponent implements OnInit {
       this.id = +params['id'];
       this.postState = this.store.select('posts');
     });
+  }
+
+  onDelete() {
+    this.store.dispatch(new DeletePost(this.id));
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 }
